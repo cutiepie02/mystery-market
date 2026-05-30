@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mystery Market</title>
+    <link rel="stylesheet" href="market.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div id="topbar">
+        <div class="top-left"></div>
+
+        <div class="top-right">
+            <a href="#" onclick="openLogin()">Login</a>
+            <a href="#order-now">Order Now</a>
+            <a href="#track">Track Order</a>
+
+            <span class="cart-box" onclick="openCart()">
+            🛒 <span id="cartCount">0</span>
+            </span>
+
+            <span id="userDisplay"></span>
+        </div>
+    </div>
+
+    <nav id="navbar">
+        <div id="logo">
+            <img src="Images/logo.png" alt="Mystery Market">
+        </div>
+        <h1>Mystery Market</h1>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#products">Mystery Boxes</a></li>
+            <li class="item"><a href="#spin-section">Spin & Win</a></li>
+            <li class="item"><a href="#clients-section">Clients</a></li>
+            <li class="item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="home">
+        <div class="home-content">
+            <h1 class="h-primary">Welcome to Mystery Market</h1>
+            <p>Mystery Market is a unique online shopping platform where excitement meets Surprise.
+               Choose a mystery box, spin to unlock secret discounts, and receive a thrilling package delivered straight to your doorstep.
+               Every order is an adventure!!
+            </p>
+            <a href="#products" class="neon-btn">
+               Explore Now
+            </a>
+        </div>
+    </section>
+
+    <!--services section-->
+    <section id="services-container">
+    <h1 class="center">Our Services</h1>
+
+    <div id="services">
+        <div class="box">
+            <img src="Images/service1.jpg "  alt="Fast Delivery">
+            <h2 class="h-secondary center">Fast Delivery</h2>
+            <p class="center">
+                We ensure your mystery box is delivered quickly and safely with secure packaging
+                and real-time tracking for a smooth and exciting unboxing experience.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="Images/service2.jpg" alt="Secure Payments">
+            <h2 class="h-secondary center">Secure Payments</h2>
+            <p class="center">
+                All transactions are protected using encrypted payment systems to keep your
+                personal and financial information safe at every step.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="Images/service 3.jpg" alt="Surprise Guarantee">
+            <h2 class="h-secondary center">Exclusive Deals</h2>
+            <p class="center">
+                Spin & Win discounts and premium offers.
+            </p>
+        </div>
+    </div>
+    </section>
+
+
+    
+            
+
+
+    <!-- MYSTERY PRODUCTS SECTION -->
+    <section id="products">
+        <h1 class="section-title">🎁 Mystery Gift Boxes</h1>
+
+        <div class="product-container">
+
+            <div class="flip-card">
+                <div class="flip-inner">
+
+                    <div class="flip-front tech-theme">
+                        <img src="Images/box1.jpg">
+                        <h2>🎧 TECH BOX</h2>
+                    </div>
+
+                    <div class="flip-back">
+                        <h3>What's Inside?</h3>
+                        <ul>
+                            <li>🎧 Earbuds</li>
+                            <li>🖱 Gaming Mouse</li>
+                            <li>💡 LED Lights</li>
+                            <li>🎁 Mystery Gadget</li>
+                        </ul>
+                        <button onclick="addToCart('Tech Box', 999)">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+
+                    <div class="flip-front fashion-theme">
+                        <img src="Images/box2.jpg">
+                        <h2>👗 FASHION BOX</h2>
+                    </div>
+
+                    <div class="flip-back">
+                        <h3>What's Inside?</h3>
+                        <ul>
+                        <li>👕 Trendy T-shirt</li>
+                        <li>👜 Stylish Bag</li>
+                        <li>🕶 Sunglasses</li>
+                        <li>🎁 Mystery Accessory</li>
+                        </ul>
+                        <button onclick="addToCart('Fashion Box', 799)">Add to Cart</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front gaming-theme">
+                        <img src="Images/box3.jpg">
+                        <h2>🎮 Gaming Box</h2>
+                    </div>
+                    <div class="flip-back">
+                        <h3>What's Inside?</h3>
+                        <ul>
+                            <li>🎮Controller</li>
+                            <li>Mousepad</li>
+                            <li>RGB Lights</li>
+                            <li>🎁Hidden Gaming Loot</li>
+                        </ul>
+                        <button onclick="addToCart('Gaming Box', 1299)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front mega-theme">
+                        <img src="Images/box4.jpg">
+                        <h2>🔥 MEGA BOX</h2>
+                    </div>
+                    <div class="flip-back">
+                        <h3>What's Inside?</h3>
+                        <ul>
+                            <li>Mixed Items</li>
+                            <li>Premium Product</li>
+                            <li>Accessories</li>
+                            <li>🎁Premium Surprise Gift</li>
+                        </ul>
+                        <button onclick="addToCart('Mega Box', 1499)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front premium-theme">
+                        <img src="Images/box5.jpg">
+                        <h2>👑 ELITE BOX</h2>
+                    </div>
+                    <div class="flip-back">
+                        <h3>What's Inside?</h3>
+                        <ul>
+                            <li>⌚Watch</li>
+                            <li>💼Wallet</li>
+                            <li>🧴Perfume</li>
+                            <li>+ Luxury Mystery Item</li>
+                        </ul>
+                        <button onclick="addToCart('Elite Box', 1999)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front fitness-theme">
+                       <img src="Images/box6.jpg">
+                       <h2>💪 FITNESS BOX</h2>
+                    </div>
+                    <div class="flip-back">
+                        <h3>What's Inside?</h3>
+                        <ul>
+                            <li>🍫Protein Bar</li>
+                            <li>⚡Resistance Band</li>
+                            <li>🥤Shaker Bottles</li>
+                            <li>+ Hidden Fitness Gear</li>
+                        </ul>
+                        <button onclick="addToCart('Fitness Box', 699)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front beauty-theme">
+                        <img src="Images/box7.jpg">
+                        <h2>💄 BEAUTY BOX</h2>
+                    </div>
+                    <div class="flip-back">
+                        <h3>What's Inside?</h3>
+                        <ul>
+                            <li>💄Makeup Essentials</li>
+                            <li>✨Skincare products</li>
+                            <li>Perfumes</li>
+                            <li>🎁Secret Glam Item</li>
+                        </ul>
+                        <button onclick="addToCart('Beauty Box', 899)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front anime-theme">
+                        <img src="Images/box8.jpg">
+                        <h2>🔥 ANIME BOX</h2>
+                    </div>
+                    <div class="flip-back">
+                        <h3>What's Inside?</h3>
+                        <ul>
+                            <li>Figures</li>
+                            <li>keychains</li>
+                            <li>Poster</li>
+                            <li>🎁Rare Collectible Inside </li>
+                        </ul>
+                        <button onclick="addToCart('Anime Box', 1099)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front chaos-theme">
+                        <img src="Images/box9.jpg">
+                        <h2>🎲 CHAOS BOX</h2>
+                    </div>
+                    <div class="flip-back">
+                        <h3>What's Inside?</h3>
+                        <ul>
+                            <li>🎁Totally Random Surprise</li>
+                        </ul>
+                        <button onclick="addToCart('Chaos Box', 499)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRODUCT DETAILS MODAL -->
+<div id="productModal" class="product-modal">
+    <div class="product-modal-content">
+        <span class="close-btn" onclick="closeDetails()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <button class="add-cart-btn">Add to Cart</button>
+    </div>
+</div>
+        
+
+
+    <!-- Spin Section -->
+    <section id="spin-section">
+         <h1 class="spin-title">🎡Spin & Win</h1>
+         <p class="center">
+          Try your luck!! Spin the wheel to unlock exciting discounts and bonus
+          rewards before placing your order.
+        </p>
+
+        <div class="spin-container">
+            <div class="wheel-wrapper">
+                <div class="pointer"></div>
+                <div id="wheel"></div>
+            </div>
+            <button id="spinBtn"onclick="spinWheel()">SPIN NOW</button>
+            <div id="resultbox">
+                <p id="resulttext"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS SECTION -->
+    <section id="clients-section">
+        <h1 class="h-primary center">🌟 Our Happy Explorers</h1>
+
+        <div class="clients-container">
+
+            <div class="client-card">
+                <div class="client-img"></div>
+                <h3>Aarav Sharma</h3>
+                <p>“The Tech Mystery Box blew my mind! Totally worth it.”</p>
+            </div>
+
+            <div class="client-card">
+                <div class="client-img"></div>
+                <h3>Riya Kapoor</h3>
+                <p>“Loved the fashion surprise! Amazing packaging & fast delivery.”</p>
+            </div>
+
+            <div class="client-card">
+                <div class="client-img"></div>
+                <h3>Vikram Patel</h3>
+                <p>“Spin & Win gave me 20% off! This platform is addictive.”</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+            <p class="center">
+              Have questions or need support? Fill out the form below and our team will get back to you.
+            </p>
+
+            <div class="contact-form-container">
+               <form action="#" method="post">
+               <input type="text" name="name" placeholder="Your Name" required>
+               <input type="email" name="email" placeholder="Your Email" required>
+               <input type="text" name="Mobile no." placeholder="Mobile.no" required>
+               <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+               <button type="submit" class="btn-submit">Send Message</button>
+               </form>
+            </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Mystery Market | Designed by Muskan</p>
+    </footer>
+
+     <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLogin()">&times;</span>
+            <h2>Login to Mystery Market</h2>
+
+            <form onsubmit="return loginUser()">
+               <input type="text" id="loginUsername" placeholder="Username">
+               <input type="password" id="loginPassword" placeholder="Password">
+               <button type="submit" onclick="loginUser()">Login</button>
+               <p class="switch-text">
+                Don't have an account? 
+                <a href="#" onclick="openRegister()">Register</a>
+               </p>
+            </form>
+
+           <p id="loginError" style="color:red;"></p>
+        </div>
+
+    </div>
+
+    <!-- REGISTER MODAL -->
+    <div id="registerModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeRegister()">&times;</span>
+            <h2>Create Account</h2>
+
+            <form onsubmit="return registerUser()">
+                <input type="text" id="regUsername"  name="username" placeholder="Username">
+                <input type="email" id="regEmail" name="email" placeholder="Email">
+                <div style="position: relative; width: 100%;">
+                    <input type="password" id="regPassword" name="password" placeholder="Password"
+                    style="width:100%; padding-right:40px;" required>
+                    <span onclick="togglePassword('regPassword', this)"
+                    style="position:absolute; right:10px; top:50%; transform:translateY(-50%); cursor:pointer;">
+                        👁️</span>
+                </div>
+                <input type="password" id="regConfirm" placeholder="Confirm Password">
+                <span onclick="togglePassword('regConfirm', this)">👁️</span>
+                <label style="font-size:14px;">
+                    <input type="checkbox" id="terms"> I agree to Terms & Conditions
+                </label>
+                <button type="submit">Register</button>
+            </form>
+
+            <p id="registerError" style="color:red;"></p>
+        </div>
+
+    </div>
+
+    <!-- CART MODAL -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCart()">&times;</span>
+            <h2>Your Cart 🛒</h2>
+
+            <ul id="cartItems"></ul>
+            <button onclick="checkout()">Checkout</button>
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+    <!-- CHECKOUT MODAL -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+
+            <span class="close-btn" onclick="closeCheckout()">&times;</span>
+            <h2>🧾 Checkout</h2>
+        <!-- ORDER SUMMARY -->
+            <div id="checkoutItems"></div>
+
+            <input type="text" id="address" placeholder="Delivery Address">
+
+        <!-- PAYMENT -->
+            <select id="paymentMethod">
+                <option value="">Select Payment Method</option>
+                <option>Cash on Delivery</option>
+                <option>UPI</option>
+                <option>Card Payment</option>
+            </select>
+
+             <button onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+
+
+
+
+
+
+    
+    <script>
+        function showToast(message, type = "success") {
+            const container = document.getElementById("toast-container");
+
+            const icons = {
+                success: "✅",
+                error: "❌",
+                info: "ℹ️",
+                warning: "⚠️"
+            };
+
+            const toast = document.createElement("div");
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `<span>${icons[type]}</span> ${message}`;
+
+            container.appendChild(toast);
+            setTimeout(() => {
+            toast.remove();
+            }, 3000);
+        }
+
+        function openLogin() {
+            document.getElementById("loginModal").style.display = "block";
+        }
+        // CLOSE LOGIN
+        function closeLogin() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+
+
+        // LOGIN VALIDATION
+        function loginUser() {
+
+            let username = document.getElementById("loginUsername").value;
+            let password = document.getElementById("loginPassword").value;
+
+            fetch("http://localhost/mystery_market/login.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: `username=${username}&password=${password}`
+           })
+           .then(res => res.text())
+           .then(data => {
+
+                if (data === "success") {
+
+                    localStorage.setItem("loggedInUser", username);
+                    alert("Login Successful 🎉 Welcome "+ username);
+
+                    closeLogin();
+                    location.reload();
+
+                } else {
+                      document.getElementById("loginError").innerText = "Invalid username or password";
+                    }
+
+                    });
+
+                return false; // stop default form submit
+        }
+
+
+        function openRegister() {
+            document.getElementById("loginModal").style.display = "none";
+            document.getElementById("registerModal").style.display = "block";
+        }
+
+        function closeRegister() {
+            document.getElementById("registerModal").style.display = "none";
+        }
+
+        // REGISTER USER
+        function registerUser() {
+            let username = document.getElementById("regUsername").value;
+            let email = document.getElementById("regEmail").value;
+            let password = document.getElementById("regPassword").value;
+            let confirm = document.getElementById("regConfirm").value;
+            let terms = document.getElementById("terms").checked;
+            let error = document.getElementById("registerError");
+
+            error.innerHTML = "";
+
+            if (username.length < 4) {
+                error.innerHTML = "Username must be at least 4 characters";
+                return false;
+            }
+
+            let passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+            if (!password.match(passPattern)) {
+            error.innerHTML = "Password must contain capital, small & digit";
+            return false;
+            }
+
+            if (password !== confirm) {
+                error.innerHTML = "Passwords do not match";
+                return false;
+            }
+
+            if (!terms) {
+                error.innerHTML = "Please accept Terms & Conditions";
+                return false;
+            }
+
+            fetch("register.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: `username=${username}&email=${email}&password=${password}`
+            })
+            .then(res => res.text())
+            .then(data => {
+            if (data === "success") {
+                showtoast("Registration Successful! 🎉");
+                closeRegister();
+            } else {
+                error.innerHTML = "Registration failed: " + data;
+               }
+            });
+
+            return false; // ✅ prevents page navigation
+        }
+
+        function addToCart(item, price) {
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            cart.push({
+                name: item,
+                price: price
+            });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            updateCartCount();
+            showToast(item + " added to cart! 🛒", "success");
+        }
+
+        // OPEN CART
+    
+        function openCart() {
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let list = document.getElementById("cartItems");
+
+            list.innerHTML = "";
+
+            let total = 0;
+
+            cart.forEach(item => {
+                let li = document.createElement("li");
+                li.innerText = item.name + " - ₹" + item.price;
+                list.appendChild(li);
+
+                total += item.price;
+            });
+            let discountAmount = (total * discountValue) / 100;
+            let finalTotal = total - discountAmount;
+
+            let totalLi = document.createElement("li");
+            totalLi.innerHTML = `
+                <strong>Total: ₹${total}</strong><br>
+                <span style="color:#00ffff;">Discount: ${discountValue}%</span><br>
+                <strong style="color:#ff00cc;">Final: ₹${finalTotal}</strong>
+            `;
+            list.appendChild(totalLi);
+
+            document.getElementById("cartModal").style.display = "block";
+        }
+
+        // CLOSE CART
+        function closeCart() {
+            document.getElementById("cartModal").style.display = "none";
+        }
+
+        // CLEAR CART
+        function clearCart() {
+            localStorage.removeItem("cart");
+            updateCartCount();
+            document.getElementById("cartItems").innerHTML = "";
+        }
+
+        function checkout() {
+            if (!isLoggedIn()) {
+                alert("⚠️ Please login before checkout!");
+                openLogin();
+                return;
+            }
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            if (cart.length === 0) {
+                showToast("Your cart is empty!", "warning");
+                return;
+            }
+            let container = document.getElementById("checkoutItems");
+            container.innerHTML = "";
+
+            let total = 0;
+
+            cart.forEach(item => {
+                let div = document.createElement("div");
+                div.innerText = item.name + " - ₹" + item.price;
+                container.appendChild(div);
+                total += item.price;
+            });
+
+            let discountAmount = (total * discountValue) / 100;
+            let finalTotal = total - discountAmount;
+
+            let totalDiv = document.createElement("div");
+            totalDiv.innerHTML = `
+                <strong>Total: ₹${total}</strong><br>
+                Discount: ${discountValue}%<br>
+                <strong style="color:#ff00cc;">Final: ₹${finalTotal}</strong>
+            `;
+            container.appendChild(totalDiv);
+            document.getElementById("checkoutModal").style.display = "block";
+        }
+
+        function placeOrder() {
+
+            let address = document.getElementById("address").value;
+            let payment = document.getElementById("paymentMethod").value;
+
+            if (address === "" || payment === "") {
+                showToast("Please fill all details!", "error");
+                return;
+            }
+
+            showToast("Order Placed Successfully! 🎉", "success");
+
+            localStorage.removeItem("cart");
+            discountValue = 0;
+
+            closeCheckout();
+            closeCart();
+            updateCartCount();
+        }
+
+        function closeCheckout() {
+            document.getElementById("checkoutModal").style.display = "none";
+        }
+
+        let totalRotation = 0;
+        function spinWheel() {
+            if (!isLoggedIn()) {
+                showToast("Please login to Spin & Win!", "warning");
+                openLogin();
+                return;
+            }
+            let wheel = document.getElementById("wheel");
+            let resultText = document.getElementById("resulttext");
+    
+
+            let rewards = [
+                { text: "10% OFF 🎉", discount: 10 },
+                { text: "Free Delivery 🚚", discount: 0 },
+                { text: "20% OFF 🔥", discount: 20 },
+                { text: "Mystery Gift 🎁", discount: 5 },
+                { text: "Buy 1 Get 1 😍", discount: 15 },
+                { text: "5% OFF 🙂", discount: 5 }
+            ];
+            btn.disabled = true;
+            btn.innerText = "Spinning...";
+
+            let randomDeg = Math.floor(3000 + Math.random() * 2000);
+            totalRotation += randomDeg;
+            wheel.style.transform = `rotate(${randomDeg}deg)`;
+
+            let prizeIndex = Math.floor(Math.random() * rewards.length);
+
+            setTimeout(() => {
+
+                let reward = rewards[prizeIndex];
+                discountValue = reward.discount; // ⭐ SAVE DISCOUNT
+                localStorage.setItem("discount", reward.discount);
+
+                resultText.innerHTML = "You won: " + reward.text;
+                document.getElementById("resultbox").style.display = "block";
+
+                btn.disabled = false;
+                btn.innerText = "SPIN NOW";
+
+            }, 4000);
+    
+        }
+
+        function togglePassword(id, icon) {
+            let input = document.getElementById(id);
+
+            if (input.type === "password") {
+                input.type = "text";
+                icon.innerText = "🙈";
+            } else {
+                 input.type = "password";
+                 icon.innerText = "👁️";
+               }
+        
+        }
+
+        function isLoggedIn() {
+            return localStorage.getItem("loggedInUser") !== null;
+        }
+         // UPDATE COUNT
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            document.getElementById("cartCount").innerText = cart.length;
+        }
+
+        function closeDetails() {
+            document.getElementById("productModal").style.display = "none";
+        }
+
+
+
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            location.reload();
+        }
+
+        // LOAD COUNT ON PAGE LOAD
+        window.onload = function() {
+            updateCartCount();
+
+            let user = localStorage.getItem("loggedInUser");
+
+            if (user) {
+                document.getElementById("userDisplay").innerHTML =
+                "👤 " + user + ' | <a href="#" onclick="logout()">Logout</a>';
+            }else {
+            document.getElementById("spinBtn").style.opacity = "0.5";
+            }
+        };
+
+
+        
+   </script>
+</body>
+</html>
