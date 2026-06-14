@@ -28,9 +28,9 @@ A fun and interactive mystery box shopping website where users can explore surpr
 
 ## 📸 Screenshots
 
-![Home Page](screenshots/mm.jpg)
-![Products](screenshots/mm1.jpg)
-![login](screenshots/mm2.jpg)
+![Home Page](mm.jpg)
+![Products](mm1.jpg)
+![login](mm2.jpg)
 
 ---
 
